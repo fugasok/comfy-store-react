@@ -1,8 +1,48 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import {
+	About,
+	Cart,
+	Checkout,
+	Error,
+	HomeLayout,
+	Landing,
+	Login,
+	Orders,
+	Products,
+	Register,
+	SingleProduct,
+} from './pages';
+
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			staleTime: 1000 * 60 * 5,
+		},
+	},
+});
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <HomeLayout />,
+		errorElement: <Error />,
+		children: [
+			{
+				index: true,
+				element: <Landing />,
+			},
+		],
+	},
+]);
+
 const App = () => {
 	return (
-		<main>
-			<h1 className='text-3xl font-bold underline bg-accent'>Comfy store</h1>
-		</main>
+		<QueryClientProvider client={queryClient}>
+			<RouterProvider router={router} />;
+			<ReactQueryDevtools initialIsOpen={false} />
+		</QueryClientProvider>
 	);
 };
 export default App;
