@@ -33,8 +33,34 @@ const router = createBrowserRouter([
 				index: true,
 				element: <Landing />,
 			},
+			{
+				path: 'products',
+				element: <Products />,
+			},
+			{
+				path: 'product/:id',
+				element: <SingleProduct />,
+			},
+			{
+				path: 'cart',
+				element: <Cart />,
+			},
+			{
+				path: 'checkout',
+				element: <Checkout />,
+			},
+			{
+				path: 'orders',
+				element: <Orders />,
+			},
+			{
+				path: 'about',
+				element: <About />,
+			},
 		],
 	},
+	{ path: '/login', element: <Login />, errorElement: <Error /> },
+	{ path: '/register', element: <Register />, errorElement: <Error /> },
 ]);
 
 const App = () => {
