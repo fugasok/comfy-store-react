@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const themes = {
 	winter: 'winter',
-	forest: 'forest',
+	dracula: 'dracula',
 };
 
 const getThemeFromLocalStorage = () => {
@@ -16,8 +16,8 @@ const getThemeFromLocalStorage = () => {
 const Navbar = () => {
 	const [theme, setTheme] = useState(getThemeFromLocalStorage());
 	const handleTheme = () => {
-		const { winter, forest } = themes;
-		const newTheme = theme === winter ? forest : winter;
+		const { winter, dracula } = themes;
+		const newTheme = theme === winter ? dracula : winter;
 		setTheme(newTheme);
 	};
 
