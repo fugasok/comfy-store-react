@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom'
-import { Header, Navbar } from '../components/Header'
+import { Outlet } from 'react-router-dom';
+import { Header, Navbar } from '../components';
 
 const HomeLayout = () => {
 	return (
@@ -10,6 +10,6 @@ const HomeLayout = () => {
 				<Outlet />
 			</section>
 		</>
-	)
-}
-export default HomeLayout
+	);
+};
+export default HomeLayout;
