@@ -1,6 +1,10 @@
+import { Hero } from '../components';
+
 const Landing = () => {
-  return (
-    <div>Landing</div>
-  )
-}
-export default Landing
+	return (
+		<>
+			<Hero />
+		</>
+	);
+};
+export default Landing;
