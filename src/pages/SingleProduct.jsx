@@ -13,7 +13,11 @@ const SingleProduct = () => {
 		product.attributes;
 	const dollarsAmount = formatPrice(price);
 	const [productColor, setProductColor] = useState(colors[0]);
+	const [amount, setAmount] = useState(1);
 
+	const handleAmount = (e) => {
+		setAmount(parseInt(e.target.value));
+	};
 	return (
 		<section>
 			<div className='text-md breadcrumbs'>
@@ -62,6 +66,34 @@ const SingleProduct = () => {
 									></button>
 								);
 							})}
+						</div>
+						{/* Amount */}
+						<div className='form-control w-full max-w-xs'>
+							<label className='label' htmlFor='amount'>
+								<h4 className='text-md font-medium tracking-wider capitalize'>
+									amount
+								</h4>
+							</label>
+							<select
+								name='amount'
+								id='amount'
+								className='select select-secondary select-bordered select-md'
+								value={amount}
+								onChange={handleAmount}
+							>
+								<option value={1}>1</option>
+								<option value={2}>2</option>
+								<option value={3}>3</option>
+							</select>
+						</div>
+						{/* Cart Button */}
+						<div className='mt-10'>
+							<button
+								className='btn btn-secondary btn-md'
+								onClick={() => console.log('add to cart')}
+							>
+								Add to cart
+							</button>
 						</div>
 					</div>
 				</div>
