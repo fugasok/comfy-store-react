@@ -14,3 +14,4 @@ export { default as ProductsList } from './ProductsList';
 export { default as SelectField } from './SelectField';
 export { default as RangeField } from './RangeField';
 export { default as CheckboxField } from './CheckboxField';
+export { default as Loading } from './Loading';
