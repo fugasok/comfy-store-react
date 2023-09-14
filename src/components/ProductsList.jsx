@@ -25,8 +25,10 @@ const ProductsList = () => {
 							<h4 className='capitalize font-medium text-neutral-content'>
 								{company}
 							</h4>
-                     <p className="font-medium ml-0 sm:ml-auto text-lg">{dollarsAmount}</p>
 						</div>
+						<p className='font-medium ml-0 sm:ml-auto text-lg'>
+							{dollarsAmount}
+						</p>
 					</Link>
 				);
 			})}
