@@ -23,8 +23,8 @@ const RangeField = ({ label, name, size, price }) => {
 			/>
 			<div className='w-full flex justify-between text-xs px-2 mt-2'>
 				<span className='font-bold text-md'>0</span>
-				<span className='font-bold text-md'>
-					Max: {formatPrice(maxPrice)}
+						Max: {formatPrice(maxPrice)}
+			<span className='font-bold text-md'>
 				</span>
 			</div>
 		</div>
