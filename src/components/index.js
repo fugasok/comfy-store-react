@@ -15,3 +15,5 @@ export { default as SelectField } from './SelectField';
 export { default as RangeField } from './RangeField';
 export { default as CheckboxField } from './CheckboxField';
 export { default as Loading } from './Loading';
+export { default as CartItemsList } from './CartItemsList';
+export { default as CartTotals } from './CartTotals';
