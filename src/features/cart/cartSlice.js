@@ -67,7 +67,7 @@ const cartSlice = createSlice({
 		// use this reducer in other reducers
 		calculateTotals: (state) => {
 			state.tax = 0.2 * state.cartTotal;
-			state.orderTotal = state.cartTot + state.shipping + state.tax;
+			state.orderTotal = state.cartTotal + state.shipping + state.tax;
 			localStorage.setItem('cart', JSON.stringify(state));
 		},
 	},
