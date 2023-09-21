@@ -3,15 +3,14 @@ import { CartItemsList, SectionTitle, CartTotals } from '../components';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-	//temp
-	const user = null;
+	const user = useSelector((state) => state.userState.user);
 	const numItemsInCart = useSelector(
 		(state) => state.cartState.numItemsInCart
 	);
 
-  if(numItemsInCart===0){
-    return <SectionTitle text='Your cart is empty'/>
-  }
+	if (numItemsInCart === 0) {
+		return <SectionTitle text='Your cart is empty' />;
+	}
 	return (
 		<>
 			<SectionTitle text='Shopping Cart' />
@@ -29,10 +28,7 @@ const Cart = () => {
 							Proceed to checkout
 						</Link>
 					) : (
-						<Link
-							to='/login'
-							className='btn btn-primary btn-block mt-8'
-						>
+						<Link to='/login' className='btn btn-primary btn-block mt-8'>
 							Please login
 						</Link>
 					)}
