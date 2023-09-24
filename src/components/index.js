@@ -10,6 +10,7 @@ export { default as Filters } from './Filters';
 export { default as ProductsGrid } from './ProductsGrid';
 export { default as ProductsContainer } from './ProductsContainer';
 export { default as PaginationContainer } from './PaginationContainer';
+export { default as ComplextPaginationContainer } from './ComplextPaginationContainer';
 export { default as ProductsList } from './ProductsList';
 export { default as SelectField } from './SelectField';
 export { default as RangeField } from './RangeField';
