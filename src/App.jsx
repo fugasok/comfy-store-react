@@ -47,19 +47,19 @@ const router = createBrowserRouter([
 				index: true,
 				element: <Landing />,
 				errorElement: <ErrorElement />,
-				loader: landingLoader,
+				loader: landingLoader(queryClient),
 			},
 			{
 				path: 'products',
 				element: <Products />,
 				errorElement: <ErrorElement />,
-				loader: productsLoader,
+				loader: productsLoader(queryClient),
 			},
 			{
 				path: 'products/:id',
 				element: <SingleProduct />,
 				errorElement: <ErrorElement />,
-				loader: singleProductLoader,
+				loader: singleProductLoader(queryClient),
 			},
 			{
 				path: 'cart',
@@ -69,12 +69,12 @@ const router = createBrowserRouter([
 				path: 'checkout',
 				element: <Checkout />,
 				loader: checkoutLoader(store),
-				action: CheckoutAction(store),
+				action: CheckoutAction(store, queryClient),
 			},
 			{
 				path: 'orders',
 				element: <Orders />,
-				loader: ordersLoader(store),
+				loader: ordersLoader(store, queryClient),
 			},
 			{
 				path: 'about',
